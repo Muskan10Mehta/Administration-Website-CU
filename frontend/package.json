@@ -1,0 +1,53 @@
+{
+  "name": "cuweb2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^6.1.2",
+    "@headlessui/react": "^1.2.0",
+    "@heroicons/react": "^1.0.1",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "autoprefixer": "^9.8.6",
+    "axios": "^0.25.0",
+    "bootstrap": "^4.6.0",
+    "postcss": "^7.0.35",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.0",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "tailwind-scrollbar-hide": "^1.0.3",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3000",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.2.1",
+    "tailwindcss-text-indent": "^1.0.2"
+  }
+}
