@@ -1,23 +1,23 @@
 import React from "react";
 import Layout from "./Layout";
 import Title from "../../common/components/home/title";
-import { getClean, getSus, getWaste, getWater } from "../admin/getPDF";
+import { getSus, getWaste, getWater } from "../admin/getPDF";
 import Table from "./../../common/components/table/table";
 import TableRow from "./../../common/components/table/row";
 export default function Sustainability() {
-  const [clean, setClean] = React.useState([]);
+  //const [clean, setClean] = React.useState([]);
   const [sus, setSus] = React.useState([]);
   const [waste, setWaste] = React.useState([]);
   const [water, setWater] = React.useState([]);
 
   React.useEffect(() => {
-    getClean()
-      .then((res) => {
-        setClean(res.data);
-      })
-      .catch((err) => {
-        console.log("error");
-      });
+    // getClean()
+    //   .then((res) => {
+    //     setClean(res.data);
+    //   })
+    //   .catch((err) => {
+    //     console.log("error");
+    //   });
     getSus()
       .then((res) => {
         setSus(res.data);
@@ -50,7 +50,7 @@ export default function Sustainability() {
             <h1 className="text-2xl font-bold text-left text-red-600 ml-5 border-b border-solid border-red-600">
               Cleanliness
             </h1>
-            {clean.length > 0 ? (
+            {/* {clean.length > 0 ? (
               <Table
                 rows={
                   <>
@@ -70,7 +70,7 @@ export default function Sustainability() {
               <h3 className="text-xl md:text-3xl mt-10 text-red-600 text-center">
                 Coming soon
               </h3>
-            )}
+            )} */}
           </div>
           <br />
           <br />

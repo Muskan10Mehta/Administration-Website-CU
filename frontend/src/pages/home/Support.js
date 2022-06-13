@@ -126,7 +126,7 @@ export default function Support() {
           </div>
           <br />
           <br />
-
+          {/* 
           <div id="demandff">
             <h1 className="text-2xl font-bold text-left text-red-600 ml-5 border-b border-solid border-red-600">
               Demand for Furniture/Renovation
@@ -152,7 +152,7 @@ export default function Support() {
                 Coming soon
               </h3>
             )}
-          </div>
+          </div> */}
           <br />
           <br />
 
@@ -187,17 +187,18 @@ export default function Support() {
 
           <div id="maintenance">
             <h1 className="text-2xl font-bold text-left text-red-600 ml-5 border-b border-solid border-red-600">
-              Maintenance - Housekeeping - sanitization
+              Infrastructure - Demands and Maintenance
             </h1>
-            {/* Maintenance */}
+
+            {/* Demand for Furniture/Renovation */}
             <h1 className="text-2xl font-bold text-left text-red-600 ml-10 mt-10 border-l border-red-600 pl-5">
-              Maintenance
+              Demand for Furniture/Renovation
             </h1>
-            {maintain.length > 0 ? (
+            {dff.length > 0 ? (
               <Table
                 rows={
                   <>
-                    {maintain.map((item) => (
+                    {dff.map((item) => (
                       <TableRow
                         content={
                           <a href={item.url} target="_blank" rel="noreferrer">
@@ -241,6 +242,58 @@ export default function Support() {
               </h3>
             )}
 
+            {/* Maintenance */}
+            <h1 className="text-2xl font-bold text-left text-red-600 ml-10 mt-10 border-l border-red-600 pl-5">
+              Maintenance
+            </h1>
+            {maintain.length > 0 ? (
+              <Table
+                rows={
+                  <>
+                    {maintain.map((item) => (
+                      <TableRow
+                        content={
+                          <a href={item.url} target="_blank" rel="noreferrer">
+                            {item.name}
+                          </a>
+                        }
+                      />
+                    ))}
+                  </>
+                }
+              />
+            ) : (
+              <h3 className="text-xl md:text-3xl mt-10 text-red-600 text-center">
+                Coming soon
+              </h3>
+            )}
+
+            {/* Inventory */}
+            <h1 className="text-2xl font-bold text-left text-red-600 ml-10 mt-10 border-l border-red-600 pl-5">
+              Inventory
+            </h1>
+            {inven.length > 0 ? (
+              <Table
+                rows={
+                  <>
+                    {inven.map((item) => (
+                      <TableRow
+                        content={
+                          <a href={item.url} target="_blank" rel="noreferrer">
+                            {item.name}
+                          </a>
+                        }
+                      />
+                    ))}
+                  </>
+                }
+              />
+            ) : (
+              <h3 className="text-xl md:text-3xl mt-10 text-red-600 text-center">
+                Coming soon
+              </h3>
+            )}
+
             {/* Sanitization */}
             <h1 className="text-2xl font-bold text-left text-red-600 ml-10 mt-10 border-l border-red-600 pl-5">
               Sanitization
@@ -250,6 +303,32 @@ export default function Support() {
                 rows={
                   <>
                     {sanit.map((item) => (
+                      <TableRow
+                        content={
+                          <a href={item.url} target="_blank" rel="noreferrer">
+                            {item.name}
+                          </a>
+                        }
+                      />
+                    ))}
+                  </>
+                }
+              />
+            ) : (
+              <h3 className="text-xl md:text-3xl mt-10 text-red-600 text-center">
+                Coming soon
+              </h3>
+            )}
+
+            {/* Space allotment */}
+            <h1 className="text-2xl font-bold text-left text-red-600 ml-10 mt-10 border-l border-red-600 pl-5">
+              Space Allotment
+            </h1>
+            {space.length > 0 ? (
+              <Table
+                rows={
+                  <>
+                    {space.map((item) => (
                       <TableRow
                         content={
                           <a href={item.url} target="_blank" rel="noreferrer">
@@ -299,12 +378,12 @@ export default function Support() {
           <br />
           <br />
 
-          <div id="support">
+          {/* <div id="support">
             <h1 className="text-2xl font-bold text-left text-red-600 ml-5 border-b border-solid border-red-600">
               Space Allotment & Inventory
             </h1>
 
-            {/* Space allotment */}
+            
             <h1 className="text-2xl font-bold text-left text-red-600 ml-10 mt-10 border-l border-red-600 pl-5">
               Space Allotment
             </h1>
@@ -330,7 +409,7 @@ export default function Support() {
               </h3>
             )}
 
-            {/* Inventory */}
+           
             <h1 className="text-2xl font-bold text-left text-red-600 ml-10 mt-10 border-l border-red-600 pl-5">
               Inventory
             </h1>
@@ -354,8 +433,8 @@ export default function Support() {
               <h3 className="text-xl md:text-3xl mt-10 text-red-600 text-center">
                 Coming soon
               </h3>
-            )}
-          </div>
+            )} 
+            </div> */}
           <br />
           <br />
         </>

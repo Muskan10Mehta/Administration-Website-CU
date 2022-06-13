@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "./Layout";
 import Title from "../../common/components/home/title";
-import { getGallery, getCeleb } from "../admin/getPDF";
+import { getGallery } from "../admin/getPDF";
 import Table from "./../../common/components/table/table";
 import TableRow from "./../../common/components/table/row";
 
 export default function Gallery() {
   const [data, setData] = React.useState([]);
-  const [celeb, setCeleb] = React.useState([]);
+  //const [celeb, setCeleb] = React.useState([]);
 
   React.useEffect(() => {
     getGallery()
@@ -17,13 +17,13 @@ export default function Gallery() {
       .catch((err) => {
         console.log("error");
       });
-    getCeleb()
-      .then((res) => {
-        setCeleb(res.data);
-      })
-      .catch((err) => {
-        console.log("error");
-      });
+    // getCeleb()
+    //   .then((res) => {
+    //     setCeleb(res.data);
+    //   })
+    //   .catch((err) => {
+    //     console.log("error");
+    //   });
   }, []);
   return (
     <>
@@ -56,7 +56,7 @@ export default function Gallery() {
             </div>
             <br />
             <br />
-            <div id="celebrations">
+            {/* <div id="celebrations">
               <h1 className="text-2xl font-bold text-left text-red-600 ml-5 border-b border-solid border-red-600">
                 Celebrations and Arrangements
               </h1>
@@ -81,7 +81,7 @@ export default function Gallery() {
                   Coming soon
                 </h3>
               )}
-            </div>
+            </div> */}
           </>
         }
       ></Layout>

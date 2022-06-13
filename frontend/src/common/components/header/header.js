@@ -62,13 +62,13 @@ const support = [
     href: "/support#venues",
     icon: ShieldCheckIcon,
   },
-  {
-    name: "Demand for furniture/Renovation",
-    description: "",
-    link: "/support",
-    href: "/support#demandff",
-    icon: ShieldCheckIcon,
-  },
+  // {
+  //   name: "Demand for furniture/Renovation",
+  //   description: "",
+  //   link: "/support",
+  //   href: "/support#demandff",
+  //   icon: ShieldCheckIcon,
+  // },
   {
     name: "Facilities",
     description: "",
@@ -77,7 +77,7 @@ const support = [
     icon: ShieldCheckIcon,
   },
   {
-    name: "Maintenance - Housekeeping - Sanitization",
+    name: "Infrastructure - Demands and Maintenance",
     description: "",
     link: "/support",
     href: "/support#maintenance",
@@ -90,23 +90,23 @@ const support = [
     href: "/support#pantries",
     icon: ShieldCheckIcon,
   },
-  {
-    name: "Space Allotment & Inventory",
-    description: "",
-    link: "/support",
-    href: "/support#inventory",
-    icon: ShieldCheckIcon,
-  },
+  // {
+  //   name: "",
+  //   description: "",
+  //   link: "/support",
+  //   href: "/support#inventory",
+  //   icon: ShieldCheckIcon,
+  // },
 ];
 
 const sustainability = [
-  {
-    name: "Cleanliness",
-    description: "",
-    link: "/sustainability",
-    href: "/sustainability#susclean",
-    icon: SupportIcon,
-  },
+  // {
+  //   name: "Cleanliness",
+  //   description: "",
+  //   link: "/sustainability",
+  //   href: "/sustainability#susclean",
+  //   icon: SupportIcon,
+  // },
   {
     name: "Sustainability Report",
     description: "",
@@ -130,31 +130,32 @@ const sustainability = [
   },
 ];
 
-const newsletters = [
-  {
-    name: "Newsletters",
-    description: "",
-    link: "/newsletters",
-    href: "/newsletters#newsletters",
-    icon: SupportIcon,
-  },
-];
-const gallery = [
-  {
-    name: "Gallery",
-    description: "",
-    link: "/gallery",
-    href: "/gallery#gallery",
-    icon: SupportIcon,
-  },
-  {
-    name: "Celebrations and Arrangements",
-    description: "",
-    link: "/gallery",
-    href: "/gallery#celebrations",
-    icon: SupportIcon,
-  },
-];
+// const newsletters = [
+//   {
+//     name: "Newsletters",
+//     description: "",
+//     link: "/newsletters",
+//     href: "/newsletters#newsletters",
+//     icon: SupportIcon,
+//   },
+// ];
+
+// const gallery = [
+//   {
+//     name: "Gallery",
+//     description: "",
+//     link: "/gallery",
+//     href: "/gallery#gallery",
+//     icon: SupportIcon,
+//   },
+//   {
+//     name: "Celebrations and Arrangements",
+//     description: "",
+//     link: "/gallery",
+//     href: "/gallery#celebrations",
+//     icon: SupportIcon,
+//   },
+// ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -379,7 +380,15 @@ export default function Header() {
                   </Popover>
 
                   <Popover className="relative">
-                    {({ open }) => (
+                    <Link to="/newsletters" target="_self">
+                      <a
+                        href="#newsletters"
+                        className="text-base font-medium text-gray-500 hover:text-gray-900"
+                      >
+                        Newsletters
+                      </a>
+                    </Link>
+                    {/* {({ open }) => (
                       <>
                         <Popover.Button
                           className={classNames(
@@ -440,11 +449,20 @@ export default function Header() {
                           </Popover.Panel>
                         </Transition>
                       </>
-                    )}
+                    )} */}
                   </Popover>
 
                   <Popover className="relative">
-                    {({ open }) => (
+                    <Link to="/gallery" target="_self">
+                      <a
+                        href="#gallery"
+                        className="text-base font-medium text-gray-500 hover:text-gray-900"
+                      >
+                        Gallery
+                      </a>
+                    </Link>
+
+                    {/* {({ open }) => (
                       <>
                         <Popover.Button
                           className={classNames(
@@ -506,7 +524,7 @@ export default function Header() {
                           </Popover.Panel>
                         </Transition>
                       </>
-                    )}
+                    )} */}
                   </Popover>
                 </Popover.Group>
 
